@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Route,NavLink } from "react-router-dom"
 import History from './History';
 import Home from './Home';
 
@@ -12,10 +12,10 @@ class App extends Component {
           <nav>
             <ul>
               <li>
-                <Link to="/">Home</Link>
+                <NavLink exact to="/" activeClassName="is-active">Home</NavLink>
               </li>
               <li>
-                <Link to="/notre-histoire">History</Link>
+                <NavLink exact to="/notre-histoire" activeClassName="is-active">History</NavLink>
               </li>
             </ul>
           </nav>
